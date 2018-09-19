@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block template_styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/lvl1.css') }}">
+  {% block styles %}{% endblock styles %}
+{% endblock template_styles %}
+{% block template_top_scripts %}
+  {% block top_scripts %}{% endblock top_scripts %}
+{% endblock template_top_scripts %}
+{% block content %}
+  <section id="top" class="section">
+    <div class="container">
+      {% block top %}
+      <div class="columns">
+        <div id="menu" class="column is-one-quarter is-hidden-mobile">
+          <div class="box">
+            {% block menu %}{% endblock menu %}
+          </div>
+        </div>
+        <div id="main" class="column">
+          <div class="box main-box">
+            <div class="swap is-pulled-right">
+              <label id="sidebar-toggler" class="switch is-on">
+                <input type="checkbox" checked onclick="toggleSidebar()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            {% block main %}{% endblock main %}
+          </div>
+        </div>
+        <div id="sidebar" class="column is-one-fifth" style="max-width: 8rem;">
+          <div class="box">
+          </div>
+        </div>
+      </div>
+    {% endblock top %}
+    </div>
+  </section>
+  <section  id="bottom" class="section">
+    <div class="container">
+      {% block bottom %}{% endblock bottom %}
+    </div>
+  </section>
+{% endblock content %}
+{% block template_bottom_scripts %}
+  <script src="{{url_for('static', filename='js/lvl1.js')}}"></script>
+  {% block bottom_scripts %}{% endblock bottom_scripts %}
+{% endblock template_bottom_scripts %}

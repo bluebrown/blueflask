@@ -1,0 +1,75 @@
+version: "3"
+
+services:
+
+
+  web:
+
+    build: ./flask_conf
+
+    image: blueflask:1.0
+
+    volumes:
+      - './application:/application'
+
+    environment:
+      FLASK_DEBUG: 1
+      FLASK_ENV: development
+      FLASK_APP: __init__.py
+
+    ports:
+      - '5000:5000'
+
+    entrypoint:
+      - flask
+      - run
+      - --host=0.0.0.0
+
+
+
+  data:
+
+    image: mongo:4.1.2
+
+    ports:
+      - '27017:27017'
+
+    volumes:
+      - ./data:/data/db
+
+
+
+  cache:
+
+    image: redis:4.0.11
+
+    ports:
+      - '6379:6379'
+    volumes:
+      - ./cache:/data
+      - ./redis_conf:/data/config
+
+    entrypoint:
+      - redis-server
+      - /data/config/redis.conf
+
+
+
+  proxy:
+
+    image: nginx:1.15
+
+    ports:
+      - '8080:80'
+
+    volumes:
+      - ./nginx_conf/conf.d:/etc/nginx/conf.d
+
+
+
+  docs:
+
+    image: docs/docker.github.io:latest
+
+    ports:
+      - '4000:4000'

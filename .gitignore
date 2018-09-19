@@ -1,0 +1,16 @@
+/cache/
+/data/
+
+/application/static/images/
+/application/templates/temp.html
+/application/templates/old-home.html
+
+
+/application/__pycache__/
+/application/routes/__pycache__/
+/application/events/__pycache__/
+/application/utility/__pycache__/
+
+/application/blueprints/bprint/__pycache__/
+/application/blueprints/admin/__pycache__/
+/application/blueprints/react/__pycache__/

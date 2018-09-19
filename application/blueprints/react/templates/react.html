@@ -1,0 +1,14 @@
+{% extends "lvl1.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/react.css') }}">
+{% endblock styles %}
+
+<!-- Render react components in three column layout
+     with ids #left, #center, #right (in #top)
+     and or overload #top  and #bottom <section -->
+
+{% block bottom_scripts %}
+  <script src="{{url_for('.static', filename='js/react-base.js')}}"></script>
+  <script src="{{url_for('static', filename='js/test.js')}}"></script>
+{% endblock bottom_scripts %}

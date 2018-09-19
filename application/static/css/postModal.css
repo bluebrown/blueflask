@@ -1,0 +1,40 @@
+.modal-background{
+  background-color: rgba(10,10,10,.4);
+}
+
+.modal {
+  top: -14rem;
+  box-shadow: 0px 0px 4px 1px .5;
+}
+
+.modal-card {
+  border-radius: 5px;
+  max-width: 30rem;
+  max-height: calc(60vh - 40px);
+}
+
+.modal-card-body{
+  padding: 0px;
+}
+
+header.modal-card-head, footer.modal-card-foot {
+  padding: 10px;
+  background-color: azure;
+}
+
+footer.modal-card-foot{
+  padding-right: 1.5rem;
+}
+
+.input.input {
+  max-width: 6rem;
+}
+
+div.field.is-grouped{
+  margin: 0px;
+  margin-right: 10rem;
+}
+
+.button.is-info{
+  margin-left: auto;
+}

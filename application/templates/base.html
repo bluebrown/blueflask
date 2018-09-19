@@ -1,0 +1,75 @@
+{% extends "required.html" %}
+{% block title %}Blue Flask{% endblock title %}
+{% block base_styles %}
+   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/toggler.css') }}">
+   {% block template_styles %}{% endblock template_styles %}
+{% endblock base_styles %}
+{% block base_top_scripts %}
+  {% block template_top_scripts %}{% endblock template_top_scripts %}
+{% endblock base_top_scripts %}
+{% block navbar %}
+  <section class="hero is-info is-hidden-mobile" style="background-color: #0e7cc4">
+    <nav class="mini-nav" role="navigation">
+      <div class="navbar-brand">
+        <span class="navbar-item" style="margin-right:auto;"></span>
+        <a class="navbar-item" href="/">Celery</a>
+        <a class="navbar-item" href="/">Flask</a>
+        <a  class="navbar-item" href="/">MongoDB</a>
+        <a class="navbar-item" href="/">Nginx</a>
+        <a class="navbar-item" href="/react">React</a>
+        <a class="navbar-item" href="/">Redis</a>
+        <a class="navbar-item" href="/">Socket.io</a>
+        <a class="navbar-item" href="http://0.0.0.0:4000">Docker</a>
+        <span class="navbar-item" style="margin-right:auto;"></span>
+      </div>
+    </nav>
+    <div class="hero-title">
+      <h1 class="title is-text-center"><a href="/">Blue Flask</a></h1>
+      <p class="subtitle is-text-center">The Magical <strong>Template</strong></p>
+      <div id="hero-buttons" class="is-grouped">
+        <button type="button" class="button is-herobtn">Cold</button>
+        <button type="button" class="button is-herobtn">Action</button>
+      </div>
+    </div>
+  </section>
+  <nav class="navbar is-info has-glow"
+       role="navigation"
+       aria-label="main navigation"
+       style="background-color:#0e70c4;">
+    <div class="navbar-brand">
+      <div class="navbar-item is-hidden-mobile">
+        <label id="hero-toggler" class="switch is-on">
+          <input type="checkbox" checked onclick="toggleHero()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <input class="navbar-item search-field control is-hidden-mobile" placeholder="Search" />
+      <a id="home" class="navbar-item is-mark is-marked" href="/" style="margin-left:3rem;">Home</a>
+      <a id="admin" class="navbar-item is-mark" href="/admin">Admin Board</a>
+      <a id="react" class="navbar-item is-mark" href="/react">React</a>
+      {% block navbar_brand %}{% endblock navbar_brand %}
+    </div>
+</nav>
+{% endblock navbar %}
+{% block footer %}
+  <footer class="footer card-footer">
+    {% block footer_content %}
+      <nav class="mini-nav">
+        <div class="navbar-brand">
+          <span class="navbar-item" style="margin-right:auto;"></span>
+          <a class="navbar-item" href="/chat">Chat</a>
+          <a class="navbar-item" href="/mongo">MongoDB</a>
+          <a class="navbar-item" href="/blueprint">Blueprint</a>
+          <a class="navbar-item" href="http://0.0.0.0:4000">Docker Docs</a>
+          <span class="navbar-item" style="margin-right:auto;"></span>
+        </div>
+      </nav>
+    {% endblock footer_content %}
+  </footer>
+{% endblock footer %}
+{% block base_bottom_scripts %}
+  <script src="{{url_for('static', filename='js/base.js')}}"></script>
+  {% block template_bottom_scripts %}{% endblock template_bottom_scripts %}
+{% endblock base_bottom_scripts %}

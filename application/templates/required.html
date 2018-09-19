@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+  <html {% block html_attr %}  {% endblock html_attr %}>
+    <head {% block head_attr %}  {% endblock head_attr %}>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% block meta %}{% endblock meta %}
+      <title>{% block title %}Bulma Template{% endblock title %}</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+      {% block base_styles %}{% endblock base_styles %}
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.2/umd/react.production.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.2/umd/react-dom.production.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+      {% block base_top_scripts %}{% endblock base_top_scripts %}
+    </head>
+    <body {% block body_attr %}  {% endblock body_attr %}>
+      {% block navbar %}{% endblock navbar %}
+      {% block outer_top %}{% endblock outer_top %}
+      {% block content %}{% endblock content %}
+      {% block outer_bottom %}{% endblock outer_bottom %}
+      {% block footer %}{% endblock footer %}
+      <script src="{{url_for('static', filename='js/socket.js')}}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      {% block base_bottom_scripts %}{% endblock base_bottom_scripts %}
+    </body>

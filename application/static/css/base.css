@@ -1,0 +1,126 @@
+.column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section.hero {
+  height: 24rem;
+  padding: 1.5rem;
+  padding-bottom: 7rem;
+  background-color: #164666;
+}
+#hero-buttons, .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+.is-herobtn{
+  width: 11rem;
+  font-size: 1.2em;
+  background-color: #212ca5;
+  margin: 0.5rem;
+  margin-top: 0;
+  border-color: transparent;
+  color: white;
+  box-shadow: 0px 5px 4px 2px #0006
+}
+.is-herobtn:hover {
+  background-color:#2f2fdb;
+  color: white;
+  border-color: transparent;
+  box-shadow: 0px 0px 16px 4px #8abbfb
+}
+
+nav.navbar {
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px -4px 33px -15px #f5f5f5;
+  border-color: #193247;
+}
+.navbar-item.search-field {
+  background-color: #256a98;
+  height: 2rem;
+  margin-top: 10px;
+  width: 14rem;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-style: groove;
+  border-color: cornflowerblue;
+}
+.search-field:focus{
+  box-shadow: 0px 0px 1px 0px white;
+}
+a.navbar-item:hover{
+  background-color: #256a98;
+}
+.is-mark{
+  padding-top: 11px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-radius: 1px;
+}
+.is-mark:hover{
+  border-bottom-style: solid;
+  background-color: #0b68b799;
+  box-shadow: 0px 3px 3px 0px #0006;
+  border-bottom-color: lightgray;
+}
+.is-mark.is-marked {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+}
+
+nav.mini-nav{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer.footer {
+}
+
+.is-major {
+  background-color:#0e7cc4;
+  border-color: transparent;
+  color: white;
+}
+.is-minor{
+  background-color: #0e70c4;
+  border-color: transparent;
+  color: white;
+}
+
+.is-dim {
+  background-color: #256a98;
+  color: white;
+  border-color: transparent;
+}
+
+.button.is-major:hover,
+.button.is-minor:hover,
+.button.is-dim:hover{
+  color: white;
+  border-color: transparent;
+  background-color: #0e7cc4;
+}
+
+.is-system {
+  margin: 2px;
+  font-size: 12px;
+  color: cornflowerblue;
+
+}
+.is-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.is-text-center {
+  text-align: center;
+}
+
+.has-glow {
+  box-shadow: 0px 0px 16px 4px #f5f5f5;
+}
+
+.has-blue-glow {
+  box-shadow: 0px 0px 16px 4px #8abbfb;
+}

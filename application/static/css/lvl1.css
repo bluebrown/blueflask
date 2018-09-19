@@ -1,0 +1,30 @@
+.section {
+  padding: 0;
+}
+
+#top, .main-box{
+  min-height: 100vh;
+
+}
+
+#top, #bottom{
+  padding: 0px;
+}
+.main-box{
+  overflow:hidden;
+  box-shadow: 0 -20px 16px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+}
+
+.box {
+  border-radius: 0px;
+}
+#sidebar {
+  margin-left: 0px;
+  z-index: -90;
+  max-width: 8rem;
+}
+
+.swap {
+  padding-top: 1rem;
+  margin-left: 1rem;
+}

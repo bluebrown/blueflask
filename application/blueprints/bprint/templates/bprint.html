@@ -1,0 +1,22 @@
+{% extends "lvl1.html" %}
+{% block html_attr %}{% endblock html_attr %}
+{% block head_attr %}{% endblock head_attr %}
+{% block meta %}{% endblock meta %}
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/bprint.css') }}">
+{% endblock styles %}
+{% block top_scripts %}{% endblock top_scripts %}
+{% block body_attr %} onload="" {% endblock body_attr %}
+{% block outer_top %}
+{% endblock outer_top %}
+{% block menu %}
+{% endblock menu %}
+{% block main %}
+{% endblock main %}
+{% block sidebar %}
+{% endblock sidebar %}
+{% block bottom %}{% endblock bottom %}
+{% block outer_bottom %}{% endblock outer_bottom %}
+{% block bottom_scripts %}
+  <script src="{{url_for('.static', filename='js/bprint.js')}}"></script>
+{% endblock bottom_scripts %}
